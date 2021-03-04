@@ -123123,7 +123123,7 @@ var Map =
 function () {
   function Map(divId) {
     this.googleMap = new google.maps.Map(document.getElementById(divId), {
-      zoom: 2,
+      zoom: 1,
       center: {
         lat: 37.7749,
         lng: -122.4194

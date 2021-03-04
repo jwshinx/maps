@@ -123111,8 +123111,7 @@ function () {
 
 exports.Company = Company;
 },{"faker":"node_modules/faker/index.js"}],"src/Map.ts":[function(require,module,exports) {
-"use strict"; // import { User } from './User';
-// import { Company } from './Company';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -123130,25 +123129,7 @@ function () {
         lng: -122.4194
       }
     });
-  } // addUserMarker(user: User) {
-  //   new google.maps.Marker({
-  //     map: this.googleMap,
-  //     position: {
-  //       lat: user.location.lat,
-  //       lng: user.location.lng
-  //     }
-  //   })
-  // }
-  // addCompanyMarker(company: Company) {
-  //   new google.maps.Marker({
-  //     map: this.googleMap,
-  //     position: {
-  //       lat: company.location.lat,
-  //       lng: company.location.lng
-  //     }
-  //   })
-  // }
-
+  }
 
   Map.prototype.addMarker = function (mappable) {
     new google.maps.Marker({
@@ -123181,14 +123162,7 @@ var user = new User_1.User();
 var company = new Company_1.Company();
 console.log('+++> hi');
 console.log(user);
-console.log(company); // new google.maps.Map(document.getElementById('map'), {
-//   zoom: 12,
-//   center: {
-//     lat: 37.7749,
-//     lng: -122.4194
-//   }
-// });
-
+console.log(company);
 var map = new Map_1.Map('map');
 map.addMarker(user);
 map.addMarker(company);

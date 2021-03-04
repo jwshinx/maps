@@ -9,14 +9,6 @@ console.log('+++> hi');
 console.log(user);
 console.log(company);
 
-// new google.maps.Map(document.getElementById('map'), {
-//   zoom: 12,
-//   center: {
-//     lat: 37.7749,
-//     lng: -122.4194
-//   }
-// });
-
 const map = new Map('map');
 map.addMarker(user);
 map.addMarker(company);

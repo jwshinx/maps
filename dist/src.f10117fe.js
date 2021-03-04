@@ -123111,7 +123111,8 @@ function () {
 
 exports.Company = Company;
 },{"faker":"node_modules/faker/index.js"}],"src/Map.ts":[function(require,module,exports) {
-"use strict";
+"use strict"; // import { User } from './User';
+// import { Company } from './Company';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -123129,24 +123130,32 @@ function () {
         lng: -122.4194
       }
     });
-  }
+  } // addUserMarker(user: User) {
+  //   new google.maps.Marker({
+  //     map: this.googleMap,
+  //     position: {
+  //       lat: user.location.lat,
+  //       lng: user.location.lng
+  //     }
+  //   })
+  // }
+  // addCompanyMarker(company: Company) {
+  //   new google.maps.Marker({
+  //     map: this.googleMap,
+  //     position: {
+  //       lat: company.location.lat,
+  //       lng: company.location.lng
+  //     }
+  //   })
+  // }
 
-  Map.prototype.addUserMarker = function (user) {
+
+  Map.prototype.addMarker = function (mappable) {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: user.location.lat,
-        lng: user.location.lng
-      }
-    });
-  };
-
-  Map.prototype.addCompanyMarker = function (company) {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: company.location.lat,
-        lng: company.location.lng
+        lat: mappable.location.lat,
+        lng: mappable.location.lng
       }
     });
   };
@@ -123181,8 +123190,8 @@ console.log(company); // new google.maps.Map(document.getElementById('map'), {
 // });
 
 var map = new Map_1.Map('map');
-map.addUserMarker(user);
-map.addCompanyMarker(company);
+map.addMarker(user);
+map.addMarker(company);
 },{"./User":"src/User.ts","./Company":"src/Company.ts","./Map":"src/Map.ts"}],"../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

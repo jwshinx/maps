@@ -18,5 +18,5 @@ console.log(company);
 // });
 
 const map = new Map('map');
-map.addUserMarker(user);
-map.addCompanyMarker(company);
+map.addMarker(user);
+map.addMarker(company);

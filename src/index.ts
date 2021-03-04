@@ -5,7 +5,6 @@ import { Map } from './Map';
 const user = new User();
 const company = new Company();
 
-console.log('+++> hi');
 console.log(user);
 console.log(company);
 
